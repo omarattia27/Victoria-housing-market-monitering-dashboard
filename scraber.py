@@ -15,11 +15,16 @@ response = requests.get(page_1_url)
 # use BS to parse the text of the HTML response
 soup = BeautifulSoup(response.text, "lxml")
 
+# find the number of pages, and the number of ads per page
 number_of_pages = soup.find("span", attrs={"class": ["resultsShowingCount-1707762110"]})
 results = [int(s) for s in number_of_pages.text.split() if s.isdigit()]
+
 print(results)
+# 
+
 number_of_pages =round(results[2]/results[1])
 count = 0
+
 for page in range(number_of_pages):
     base_url = "https://www.kijiji.ca"
 
