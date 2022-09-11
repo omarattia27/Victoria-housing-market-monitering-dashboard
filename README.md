@@ -2,7 +2,7 @@
 A dashboard that shows the general information about the rental market in Victoria BC
 
 Kijiji scraber for all renatl ads:
-scraber.py
+scraber.py (parts of code example from https://medium.com/@kaineblack/web-scraping-kijiji-ads-with-python-ef81a49e0e9e was reused)
 
 Facebook market scraber:
 scraber2.py
