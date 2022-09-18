@@ -1,9 +1,5 @@
-#facebook marketplace 
-from multiprocessing.connection import wait
 from selenium import webdriver
 from time import sleep
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
@@ -52,9 +48,9 @@ class App:
         self.driver.get("https://www.facebook.com/marketplace/category/propertyrentals?exact=false&latitude=48.4438&longitude=-123.418&radius=12")
         sleep(2)
         zoomout_button = self.driver.find_element("xpath", "/html/body/div[1]/div/div[1]/div/div[3]/div/div/div/div[1]/div[1]/div[2]/div/div/div[3]/div[1]/div[1]/div[3]/div/div/div/div[2]")
-        #self.driver.execute_script("arguments[0].click();", zoomout_button)
+        self.driver.execute_script("arguments[0].click();", zoomout_button)
         sleep(2)
-        #self.driver.execute_script("arguments[0].click();", zoomout_button)
+        self.driver.execute_script("arguments[0].click();", zoomout_button)
 
     def scrape_items_list(self): 
         sleep(2)
